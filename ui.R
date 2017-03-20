@@ -18,7 +18,11 @@ fluidPage(
             p("To cite this, just cite the pez package: Pearse, W. D., Cadotte, M. W., Cavender-Bares, J., Ives, A. R., Tucker, C. M., Walker, S. C., & Helmus, M. R. (2015). pez: phylogenetics for the environmental sciences. Bioinformatics, 31(17), 2888-2890. If you didn't upload a phylogeny in step 1, cite this paper as the source: Zanne, A. E., Tank, D. C., Cornwell, W. K., Eastman, J. M., Smith, S. A., FitzJohn, R. G., ... & Royer, D. L. (2014). Three keys to the radiation of angiosperms into freezing environments. Nature, 506(7486), 89-92. You should cite the original Dan Faith PD reference as well: Faith, D. P. (1992). Conservation evaluation and phylogenetic diversity. Biological conservation, 61(1), 1-10.")
         ),
         mainPanel(
-            tableOutput('contents')
+            verbatimTextOutput('congeneric.merge'),
+            tags$hr(),
+            verbatimTextOutput('comparative.comm'),
+            tags$hr(),
+            tableOutput('phylo.results')
         )
     )
 )
